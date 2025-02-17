@@ -1,0 +1,28 @@
+
+Your gaol is to find the **Latest Financial Year** and **Latest Financial Quarter**
+
+## Background:
+
+Financial year for Indian stock market starts from April 1st and ends on March 31st
+e.g if today's date is 17th Feb 2025 then current financial year is 2025
+But if today's date is 15th April then current financial year is 2026
+
+
+And Quarters are following
+
+1st April - 30th June : "Q1"
+1st July - 30th Sep : "Q2"
+1st Oct - 31st Dec : "Q3"
+1st Jan - 31st Mar : "Q4"
+
+When user wants to know the latest financial quarter then check the current month and find what is the current quarter. Latest financial quarter will be previous quarter then the current quarter E.g if current month is Feb then the current quarter is Q4. Therefore the latest financial quarter will be Q3
+
+
+Simailary When user wants to know the latest finnancial year then use the latest financial quarter to decide the year.
+E.g if current date is 1st May 2025 and latest financial quarter is Q4 then latest financial year will be 2025
+But if current date is 1st Oct 2025 and latest financial quarter is Q2 then latest financial year will be 2026
+
+
+## Task:
+
+Now write a program which will return latest Financial year and quarter
