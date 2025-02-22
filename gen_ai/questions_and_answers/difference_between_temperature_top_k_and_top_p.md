@@ -49,3 +49,6 @@ Adjusting temperature in conjunction with top-k or top-p allows fine-tuning of t
 Understanding and tuning these parameters can help in generating text that aligns with specific requirements, balancing creativity and coherence as needed.
 
 videoUnderstanding Temperature, Top-K & Top-Pturn0search5 
+
+
+![Difference between temperature, top-k, and top-p](image.png)
