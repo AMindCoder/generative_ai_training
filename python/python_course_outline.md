@@ -73,12 +73,11 @@
 - Pandas basics
 - Data cleaning and transformation
 - Basic data visualization with Matplotlib
-- Working with APIs
 
 **Labs:**
 - Data analysis with Pandas
 - Creating visualizations
-- API integration project
+- Working with real-world datasets
 
 ---
 
