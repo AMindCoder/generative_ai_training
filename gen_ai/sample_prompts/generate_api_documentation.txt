@@ -1,0 +1,79 @@
+
+## Goal:
+
+Generate documenation of each API and integrate it with GitBook.
+
+Follow the steps below to create a structured process for generating API documentation:
+---
+
+**Step 1: Prepare Your API Spec Files**
+
+- **Create/OpenAPI Specs:**  
+  - For each API in  current GitHub project (stock_market_metadata_api), create an OpenAPI specification file (e.g., `api1.yaml`, `api2.yaml`).  
+  - Validate the spec using [Swagger Editor](https://editor.swagger.io/) or a VS Code extension.
+
+- **Organize Files:**  
+  - Store all spec files in a dedicated directory (e.g., `/docs/openapi/`) in your repository.
+
+---
+
+**Step 2: Generate Documentation Content**
+
+- **Define Structure:**  
+  - Outline sections for each API (Overview, Authentication, Endpoints, Examples, Error Codes, etc.).  
+  - Create Markdown files or a master document referencing your spec files.
+
+- **Embed Interactive Blocks:**  
+  - Use GitBook’s OpenAPI blocks to embed your YAML/JSON files directly in your docs.  
+  - For each API page, include an interactive “Try It Out” section if needed.
+
+---
+
+**Step 3: Set Up GitBook Integration**
+
+- **Create a GitBook Space:**  
+  - Sign in to GitBook and create a new Space for your API documentation.
+
+- **Connect to GitHub:**  
+  - In GitBook’s settings, enable GitHub integration and select your repository.  
+  - Configure sync settings to auto-pull changes from your `/docs/` directory.
+
+---
+
+**Step 4: Organize and Customize Your GitBook Pages**
+
+- **Page Layout:**  
+  - Create a new page for each API using GitBook’s editor.  
+  - Embed the corresponding OpenAPI spec using GitBook’s OpenAPI block (e.g.,  
+    ```
+    {% include 'openapi', file: 'docs/openapi/api1.yaml' %}
+    ```).
+
+- **Enhance with Context:**  
+  - Add introductory text, code samples, diagrams, and usage guides around the embedded spec.
+  - Use GitBook’s WYSIWYG editor to style and format the content as needed.
+
+---
+
+**Step 5: Publish and Maintain**
+
+- **Publish:**  
+  - Preview your GitBook Space and ensure all API pages render correctly.  
+  - Publish your Space to make your docs publicly accessible (or keep them internal).
+
+- **Automation & Version Control:**  
+  - Set up a CI/CD pipeline or Git hooks to trigger GitBook sync on commits to your spec files.
+  - Use Git’s pull request process to review and merge changes to your API docs along with code updates.
+
+---
+
+**Additional Tips:**
+
+- **Keep It Up-to-Date:**  
+  - Regularly update your OpenAPI specs when your API changes.
+- **Feedback Loop:**  
+  - Encourage team reviews and use GitBook’s comments for collaborative improvements.
+- **Documentation Extras:**  
+  - Include a changelog and version history for each API for clear tracking of updates.
+
+---

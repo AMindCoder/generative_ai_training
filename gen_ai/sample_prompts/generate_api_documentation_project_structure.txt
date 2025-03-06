@@ -1,0 +1,3 @@
+Create a project structure for building and maintaining API Documentation website using Git Book Integration. Generate the complete template and landing page. I should be able to add API details, openapi.json later for each API.
+Check on the web for standard API documentation page using Git Books and implement the project structure accordingly
+
