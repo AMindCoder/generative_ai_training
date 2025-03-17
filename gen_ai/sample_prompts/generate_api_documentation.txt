@@ -1,3 +1,68 @@
+Generate API documentation of API endpoints except POST /delete, POST /update-symbol and POST / 
+
+- First provide overview of Corporate Updates APIs, by summarizing each API’s functionality. 
+- Then provide API reference, by listing out all the possible requests and responses for each API. Make sure you look into the schema for covering all possible parameter combinations in request and response including optional ones.
+- Write examples for each type of API request and response. 
+- Finally look again into each API and come up with a list of response codes that are used in the responses. 
+
+I want output in 4 different files as shown below : 
+* [Corporate Updates API](api-reference/corporate-updates/overview.md)
+  * [API Reference](api-reference/corporate-updates/reference.md)
+  * [Examples](api-reference/corporate-updates/examples.md)
+  * [Response Codes](api-reference/corporate-updates/response_codes.md)
+
+Write API documentation for one API at a time to capture complete information.
+Make sure to create a root folder called 'docs' before generating API documentation.
+
+
+
+---
+
+
+Generate API documentation of API endpoints except POST /delete, PUT /company/symbol and POST / 
+
+- First provide overview of Earning Call APIs, by summarizing each API’s functionality. 
+- Then provide API reference, by listing out all the possible requests and responses for each API. Make sure you look into the schema for covering all possible parameter combinations in request and response including optional ones. Capture the default values for optional parameters.
+- Write examples for each type of API request and response. 
+- Finally look again into each API and come up with a list of response codes that are used in the responses. 
+
+I want output in 4 different files as shown below : 
+* [Earning Call API](api-reference/earning-call/overview.md)
+  * [API Reference](api-reference/earning-call/reference.md)
+  * [Examples](api-reference/earning-call/examples.md)
+  * [Response Codes](api-reference/earning-call/response_codes.md)
+
+Write API documentation for one API at a time to capture complete information.
+Make sure to create a root folder called 'docs' (if not present already) before generating API documentation.
+
+
+---
+
+
+Generate API documentation for Company Presentation API for following endpoints:
+- GET /stock-symbol/{stock_symbol}
+- GET /recent 
+
+- First provide overview of Company Presentation APIs, by summarizing each API’s functionality. 
+- Then provide API reference, by listing out all the possible requests and responses for each API. Make sure you look into the schema for covering all possible parameter combinations in request and response including optional ones. Capture the default values for optional parameters.
+- Write examples for each type of API request and response. 
+- Finally look again into each API and come up with a list of response codes that are used in the responses. 
+
+I want output in 4 different files as shown below : 
+* [Company Presentation API](api-reference/company-presentation/overview.md)
+  * [API Reference](api-reference/company-presentation/reference.md)
+  * [Examples](api-reference/company-presentation/examples.md)
+  * [Response Codes](api-reference/company-presentation/response_codes.md)
+
+Write API documentation for one API at a time to capture complete information.
+Make sure to create a root folder called 'docs' (if not present already) before generating API documentation.
+
+
+
+
+
+
+
 
 ## Goal:
 

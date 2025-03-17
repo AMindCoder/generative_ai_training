@@ -1,0 +1,98 @@
+Create a FastAPI project named `company_transactions` implementing an Insider Trade API endpoint, following these specifications:
+
+1. **Project Structure** :
+```plaintext
+company_transactions_api/
+├── app/
+│   ├── api/
+│   │   └── v1/
+│   │       └── endpoints/
+│   │           └── insider_trade.py
+│   ├── core/
+│   │   ├── config.py
+│   │   └── logging.py
+│   ├── db/
+│   │   ├── models.py
+│   │   └── session.py
+│   ├── schemas/
+│   │   └── insider_trade.py
+│   ├── services/
+│   │   └── insider_trade.py
+│   └── main.py
+├── tests/
+│   └── api/
+│       └── v1/
+│           └── test_insider_trades.py
+├── docs/
+│   └── api-reference/
+│       └── insider-trades/
+│           ├── overview.md
+│           ├── reference.md
+│           └── examples.md
+└── requirements.txt
+
+
+2. Key Components (match existing patterns):
+
+- Service layer with InsiderTradeService class containing business logic
+- Endpoint functions handling HTTP requests/responses
+- Pydantic schemas for:
+	InsiderTradeCreate
+	InsiderTradeUpdate
+	InsiderTradeSearch
+	InsiderTradeResponse
+
+3. SQLAlchemy model InsiderTrade with fields based on the create table script given below
+
+
+
+CREATE TABLE insider_trades_nse_bse (
+    uuid                             UUID                 NOT NULL DEFAULT gen_random_uuid(),
+    isin                             VARCHAR(12)          NOT NULL,  -- ISINs are typically 12 chars
+    symbol                           TEXT                 NOT NULL,
+    company                          TEXT                 NULL,
+    acquirer_disposer_name           TEXT                 NULL,
+    person_category                  TEXT                 NULL,
+    security_type_prior              TEXT                 NULL,
+    security_count_prior             NUMERIC(20, 0)       NULL,      -- e.g. 621197910 (large integer, no fractional shares)
+    shareholding_percentage_prior    NUMERIC(8, 2)        NULL,      -- e.g. 56.48
+    security_type_acquired_disposed  TEXT                 NULL,
+    security_count_acquired_disposed NUMERIC(20, 0)       NULL,      -- e.g. 9636984 (large integer, no fractional shares)
+    security_value_acquired_disposed NUMERIC(20, 2)       NULL,      -- e.g. 9686567.16
+    transaction_type_acquisition_disposal TEXT            NULL,
+    security_type_post               TEXT                 NULL,
+    security_count_post              NUMERIC(20, 0)       NULL,
+    shareholding_percentage_post     NUMERIC(8, 2)        NULL,
+    date_allotment_acquisition_from  DATE                 NULL,      -- e.g. 2019-01-14 (time is always 00:00:00 in sample)
+    date_allotment_acquisition_to    DATE                 NULL,
+    date_of_intimation_to_company    DATE                 NULL,
+    mode_of_acquisition              TEXT                 NULL,
+    derivative_security_type         TEXT                 NULL,
+    derivative_contract_specification TEXT                NULL,
+    notional_value_buy               NUMERIC(20, 2)       NULL,      -- e.g. 0, stored as decimal
+    number_of_units_contract_buy     NUMERIC(20, 0)       NULL,      -- e.g. 0
+    notional_value_sell              NUMERIC(20, 2)       NULL,      -- e.g. 0
+    number_of_units_contract_sell    NUMERIC(20, 0)       NULL,      -- e.g. 0
+    exchange                         TEXT                 NULL,
+    broadcast_date_time              TIMESTAMP            NULL,      -- e.g. 2019-01-16 17:15:00
+    remark                           TEXT                 NULL,
+    xbrl                             TEXT                 NULL,
+    regulation                       TEXT                 NULL,
+    transformed_person_category      TEXT                 NULL,
+    transformed_security_type_prior  TEXT                 NULL,
+    transformed_transaction_type     TEXT                 NULL,
+    transformed_security_type_post   TEXT                 NULL,
+    transformed_mode_of_acquisition  TEXT                 NULL,
+    transformed_broadcast_date       DATE                 NULL,      -- e.g. 2019-01-16 (storing date only)
+    notes                            TEXT                 NULL,
+    txn_category                     TEXT                 NULL,
+    txn_duration                     TEXT                 NULL,
+    created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    ref_uuid                         UUID                 UNIQUE,
+    CONSTRAINT insider_trades_nse_bse_pkey PRIMARY KEY (uuid)
+);
+
+4. Ensure that you are using latest FastAPI functions 
+5. And build the centralized logging and config settings
+
