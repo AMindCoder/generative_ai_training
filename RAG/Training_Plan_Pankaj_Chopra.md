@@ -6,8 +6,8 @@ We propose a four-day, online training program designed specifically for your co
 ## Training Objectives
 - **Foundational Mastery:** Understand the core concepts of Retrieval-Augmented Generation (RAG), including its architecture, use cases, and evaluation frameworks.
 - **Practical Expertise:** Gain hands-on experience by building applications that leverage RAG methodologies—from QnA systems to sophisticated data indexing and retrieval strategies.
-- **Advanced Strategies:** Learn to implement robust solutions for processing and retrieving complex data (text, tabular, and images) using modern tools like vector databases and GPT-4 powered outputs.
-- **Real-World Application:** Address industry-specific scenarios that mirror challenges encountered in investor communications, annual report analysis, and multimodal data integration.
+- **Advanced Strategies:** Learn to implement robust solutions for processing and retrieving complex data (text, tabular, and images) using modern tools like pinecone, qdrant vector databases and GPT-4 powered outputs.
+- **Real-World Application:** Address industry-specific scenarios that mirror challenges encountered in Financial Market Data like investor communications, annual report analysis, and multimodal data integration.
 
 ## Training Structure & Schedule
 The course is structured into five modules over four days, with each session not exceeding 4 hours. Training modules are designed in modular manner for you to pick and choose based on your team's needs. 
@@ -42,6 +42,8 @@ The course is structured into five modules over four days, with each session not
     - *Concepts:* Understand the fundamentals and use cases of multimodal RAG and its underlying architecture.
     - *Practical:* Develop a **production grade** QnA application using a multimodal approach.
   - **Additional Q&A / Interactive Session:** (Optional, up to 2 hours) Address participant queries, review key learnings, and discuss real-world applications.
+
+**Complete Training will cost ₹1.7 Lakh (Break up is given in Investment & Value Proposition section)**
 
 ## Methodology & Tools
 - **Hands-on Focus:** With 70% of the training dedicated to practical exercises, participants will directly engage with real-world scenarios using Jupyter notebooks, ensuring immediate application of learned concepts.
