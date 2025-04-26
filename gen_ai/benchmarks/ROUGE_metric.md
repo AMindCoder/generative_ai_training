@@ -10,7 +10,6 @@ ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is a family of metrics
 - **Why “Recall-Oriented”?**  
   Unlike some metrics that focus on precision (how many words in the generated summary are “correct”), ROUGE places a strong emphasis on recall—ensuring that the generated summary covers as much important content as the reference.
 
-> For a concise definition and history, see the ROUGE (metric) overview on Wikipedia citeturn0search11.
 
 ---
 
@@ -38,7 +37,7 @@ And a machine-generated summary:
 
 This tells us that while the system captured all the key words, it also added extra information.
 
-> For more on ROUGE-N and examples, check out Kavita Ganesan’s explanation citeturn0search8.
+
 
 ---
 
@@ -55,7 +54,6 @@ Consider these summaries:
 
   The longest common subsequence (LCS) might be “The quick” and “jumps” (if we treat them as two parts), which gives us a ratio when compared to the total length of the reference.
 
-> This method is especially useful in tasks where maintaining the overall structure of the sentence matters. More details can be found in the DEV Community guide citeturn0search9.
 
 ---
 
@@ -119,7 +117,6 @@ print(scores)
 
 This code will output precision, recall, and F1 scores for each metric, helping you quantitatively assess the quality of the generated summary.
 
-> For a full tutorial and more code examples, refer to the guide by Spot Intelligence citeturn0search2.
 
 ---
 
