@@ -52,6 +52,14 @@ Python is **interpreted** but not *just* interpreted. Let’s demystify its exec
    ```  
 
 ---
+1. Core Architecture: Interpreter and Bytecode 
+- Interpreter: Python is an interpreted language, meaning it executes code line by line without a separate compilation step, as in some languages like C++. 
+- Bytecode: Python source code is compiled into an intermediate representation called bytecode. 
+- Python Virtual Machine (PVM): The PVM is responsible for executing the bytecode. It acts as an abstract machine providing the runtime environment for Python
+
+
+
+---
 
 ### **3. Python vs. Other Languages: Why It Stands Out**  
 | **Feature**          | **Python**                          | **Java**                     | **JavaScript**              |  

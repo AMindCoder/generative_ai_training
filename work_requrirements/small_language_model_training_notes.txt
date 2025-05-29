@@ -1,0 +1,133 @@
+Key requirements for Training Small Language Model
+
+
+Understanding Dimensions (Based on what we know so far)
+
+## English:
+
+- MCQ type questions spread across 5-7 different types of topics
+- Short Answers type questions across 5-7 different types of topics
+
+		MCQ Vs Short Ans  
+Ratio (based on question structure) : 80 : 20 
+
+## Maths:
+
+- Short Answers type questions across 50+ different types of topics
+- MCQ type questions across 30-40 different types of topics
+- Each topic should be further split into sub topics to get better coverage
+
+
+	 short ans Vs MCQ
+Ratio (based on question structure) :   80 : 20
+
+
+
+## Reasoning:
+
+- Equal ratio for all 21 question types
+- Each question type also has different types of samples e.g Make Word has 4-5 different types. Hence we need to label sub question types along with question types. 
+
+
+# Data Curation Requirements
+
+As we are talking about creating thousands (10k - 50K) of samples 
+- 10K for English (2k for each topic type)
+- 50K for Maths (For each topic type as we have 50+ topics) 
+- 30K for Reasoning (For each question type -> sub type level)
+
+This effort requires usage of open source models like llama3 which needs infrastructure (GPU based machines) for continuous deployment
+
+Models required for Data Curation:
+
+- Llama 3/4 (For English Questions)
+- Deepseek R1 (For Reasoning questions and reasoning traces)
+- Qwen 3 (For Reasoning Questions and reasoning traces)
+
+We need deployment of Open Source models for curation of data
+
+
+Identified SLM for training:
+
+- SmolLM2
+- Phi3/3.5/4 Reasoning Plus
+- llama3 8B
+- Gemma 3 4B
+- Qwen 3 8B
+
+
+
+
+- Use human-crafted prompts or distill from larger models (e.g. GPT-4)
+- Ensure output is well-structured and diverse in phrasing
+
+
+
+
+Workflow for training SLM
+
+
+Step 1:
+
+Take the extracted data and come up with better labelling framework for labelling each question set with key stage and difficulty level
+- This is basically improvement of our existing script with better coverage for questions from each Subject
+
+
+
+Outcome of Step1:
+- Prepare multi dimensional sheet representing the clear understanding and availability of each question type/sub-type
+- Dimensions will include difficulty , Key stage level and subject specific dimensions based on question types/sub types 
+
+Step 2 (Scaling of data curation but non-reasoning dataset):
+
+- Take sub type level of question type and prepare a script which will generate questions sets
+only at sub type level
+- Generate in iterations, means do not use default sampling of sub type as it will lead to duplicate generation
+
+e.g if sub type level has 10 question sets then generate 10 from each sub type question 
+and then use newly generated questions to generate 10 more for each type
+
+10 -> 100 -> 1000  
+
+10 -> 20 -> 40 -> 80
+
+
+Step 3:
+
+Assuming Data Curation will be happening with labels, do following:
+
+- Validate curation of data correctness
+- Validate labels are correct or not 
+
+Outcome of Step 2: 
+- Cleaned and correctly labelled data based on Exam Type Syllabus
+
+
+
+Step 4 (only for reasoning data set):
+
+- Preparation of reasoning dataset will be different as we will have only original Questions/Answer pairs but no reasoning traces
+- Therefore we will come up unique process of generating complete dataset from scratch with reasoning traces by referring the original
+question sets
+- This requires building a custom tool for handling 21 question types and their sub types for generating thousands (around 30 - 50k)
+of questions sets
+ 
+
+Step 5 Labelling and Validation (only for reasoning data set):
+
+- Build unique scripts for labelling and validation of data
+- Use of proprietary models for validation 
+
+
+Step 6 Benchmarking:
+
+- Measure accuracy of model training by integrating with metric providers like weights and Biases 
+
+
+
+Timelines :
+
+4 - 6 Weeks
+
+
+Cost : 5 Lac + GST 
