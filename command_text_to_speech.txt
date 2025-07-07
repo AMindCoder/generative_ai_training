@@ -1,0 +1,1 @@
+edge-tts --text "$(cat test/villa_desc.txt)" --voice en-US-GuyNeural --write-media  villa_description.mp3
