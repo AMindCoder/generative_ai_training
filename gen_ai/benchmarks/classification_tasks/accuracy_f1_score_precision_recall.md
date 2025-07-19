@@ -37,6 +37,25 @@ Missed 20 spam emails, marking them as not spam (FN = 20)
 Correctly identified 850 non-spam emails (TN = 850)
 
 
+## Confusion Matrix
+
+A confusion matrix is a table that visualizes the performance of a classification model. For binary classification, it shows the counts of true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN).
+
+|                | **Predicted Positive** | **Predicted Negative** |
+|----------------|------------------------|------------------------|
+| **Actual Positive** | True Positive (TP)     | False Negative (FN)     |
+| **Actual Negative** | False Positive (FP)    | True Negative (TN)     |
+
+Using the spam email example:
+
+|                | **Predicted Spam** | **Predicted Not Spam** | **Total** |
+|----------------|---------------------|--------------------------|----------|
+| **Actual Spam**    | True Positive (80)   | False Negative (20)      | 100      |
+| **Actual Not Spam** | False Positive (50)  | True Negative (850)      | 900      |
+| **Total**      | 130                 | 870                      | 1000     |
+
+
+
 Lets Calculate :
 
 Accuracy  = (TP + TN)/ (TP + FP + FN + TN)
