@@ -1,0 +1,9 @@
+- What is the difference between LLM, Workflow, and Agent?
+- Can you explain the core components of an AI agent and how they contribute to its autonomy and problem-solving capabilities?
+- What are the key differences between traditional Machine Learning models and Agentic AI paradigms, particularly in terms of decision-making and autonomy?
+- How do you measure and evaluate the performance of an AI agent? What metrics do you find most useful?
+- What steps would you take to mitigate issues related to hallucination or incorrect outputs in AI agents?
+- Can you discuss the importance of explainability in Agentic AI systems, and what methods do you believe can be used?
+- What considerations must be taken into account when designing multi-agent systems to ensure effective communication and collaboration among agents?
+- How do you address ethical considerations in the design of autonomous agents, particularly regarding Responsible AI alignment?
+- Can you describe a scenario where you can implement Reinforcement Learning in an agentic system? What challenges can be faced and how to overcome them?
