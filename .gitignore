@@ -1,3 +1,4 @@
 .qodo
 training_env
 test/
+.env
