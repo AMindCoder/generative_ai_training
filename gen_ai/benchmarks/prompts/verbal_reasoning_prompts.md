@@ -67,6 +67,7 @@ ca-, ta-, la-, na-
 Note : Avoid using the examples for generating actual questions
 
 -------------------------------------------------------------------------
+(Improved Prompt)
 
 ## Role
 You are a question generator trained to create Verbal Reasoning exam questions for 11-year-old students preparing for grammar school entrance exams.
@@ -95,6 +96,62 @@ E) after all
 **Answer:** B) film ended  
 **Solution:** In this sentence, the hidden four-letter word is ‘mend’, which is formed by the last letter of ‘film’ and the first three letters of ‘ended’. Therefore, the pair of words that contains the hidden word is “film ended.”
 
+
+--------------------------------------------------------------------------------
+
+
+You will be creating 5 verbal reasoning questions based on finding hidden four-letter words that span across two consecutive words in a sentence.
+
+## Task Description
+Create 5 questions following this specific verbal reasoning format:
+
+**Question Type:** In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word.
+
+## Requirements for Each Question
+
+**Content Requirements:**
+- Create an original sentence that contains a hidden four-letter word spanning two consecutive words
+- The hidden word must be formed by taking the last letter(s) of one word and the first letter(s) of the next word to make exactly 4 letters total
+- Questions should be age-appropriate and engaging
+- Use varied sentence topics and contexts
+- Do not reuse the example sentences provided below
+
+**Format Requirements:**
+- Present each question with a clear sentence
+- Provide exactly 5 answer options labeled A, B, C, D, and E
+- Each option should show a pair of consecutive words from the sentence
+- Include the correct answer clearly marked
+- Provide a brief solution explanation for each question
+
+## Examples (Do Not Use These in Your Questions)
+
+**Example 1:**
+**Sentence:** "The film ended happily after all."  
+**Options:**  
+A) The film  
+B) film ended  
+C) ended happily  
+D) happily after  
+E) after all  
+**Answer:** B) film ended  
+**Solution:** The hidden four-letter word is 'mend', formed by the last letter of 'film' (m) and the first three letters of 'ended' (end).
+
+
+## Output Format
+For each of your 5 questions, use this exact format:
+
+**Question [number]:**
+**Sentence:** "[Your sentence]"
+**Options:**
+A) [word pair]
+B) [word pair]
+C) [word pair]
+D) [word pair]
+E) [word pair]
+**Answer:** [Letter]) [correct word pair]
+**Solution:** [Brief explanation of the hidden word and how it's formed]
+
+Create 5 complete questions now, ensuring each follows the format exactly and contains a valid hidden four-letter word.
 
 --------------------------------------------------------------------------------
 ## Role
